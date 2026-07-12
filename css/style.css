@@ -1051,3 +1051,154 @@ a:focus-visible, button:focus-visible {
         grid-template-columns: 1fr;
     }
 }
+
+/* =========================================================
+   Contact page additions
+   ========================================================= */
+
+.contact-section {
+    max-width: 1000px;
+}
+
+.contact-layout {
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+.contact-intro-title {
+    text-align: left;
+    font-size: 1.9rem;
+    margin-bottom: 0.9rem;
+}
+
+.contact-intro .eyebrow {
+    text-align: left;
+}
+
+.contact-intro-text {
+    color: var(--ink-dim);
+    font-size: 0.95rem;
+    margin: 0 0 1rem;
+}
+
+    .contact-intro-text:last-child {
+        margin-bottom: 0;
+    }
+
+.inline-link {
+    color: var(--orange);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: opacity 0.25s ease;
+}
+
+    .inline-link:hover {
+        opacity: 0.75;
+    }
+
+/* ---------- form ---------- */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+    .form-field label {
+        font-family: var(--font-mono);
+        font-size: 0.68rem;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: var(--ink-dim);
+    }
+
+    .form-field input,
+    .form-field textarea {
+        background: var(--bg-card);
+        border: 1px solid rgba(155,89,182,0.25);
+        border-radius: var(--radius);
+        padding: 0.8rem 1rem;
+        color: var(--ink);
+        font-family: var(--font-body);
+        font-size: 0.95rem;
+        resize: vertical;
+        transition: border-color 0.25s ease, box-shadow 0.25s ease;
+    }
+
+        .form-field input:focus,
+        .form-field textarea:focus {
+            outline: none;
+            border-color: var(--violet);
+            box-shadow: 0 0 0 3px rgba(155,89,182,0.15);
+        }
+
+        .form-field input::placeholder,
+        .form-field textarea::placeholder {
+            color: var(--ink-faint);
+        }
+
+/* honeypot: hidden from real users, still present for bots to fill in */
+.form-field-honeypot {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.form-submit {
+    align-self: flex-start;
+    border: none;
+    cursor: pointer;
+    font-family: var(--font-mono);
+}
+
+    .form-submit:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+    }
+
+.form-status {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    letter-spacing: 0.03em;
+    padding: 0.7rem 1rem;
+    border-radius: var(--radius);
+    margin: 0;
+}
+
+.form-status-success {
+    color: #b9e0c9;
+    background: rgba(80, 180, 120, 0.1);
+    border: 1px solid rgba(80, 180, 120, 0.3);
+}
+
+.form-status-error {
+    color: #e3a7a7;
+    background: rgba(200, 80, 80, 0.1);
+    border: 1px solid rgba(200, 80, 80, 0.3);
+}
+
+/* ---------- responsive ---------- */
+@media (max-width: 860px) {
+    .contact-layout {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .contact-intro-title, .contact-intro .eyebrow {
+        text-align: center;
+    }
+
+    .contact-intro-text {
+        text-align: center;
+    }
+}

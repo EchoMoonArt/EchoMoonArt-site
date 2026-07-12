@@ -22,14 +22,12 @@ import { getAuth } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-aut
 
 // TODO: replace with Mani's actual Firebase config values.
 const firebaseConfig = {
-    apiKey: "AIzaSyAjbFi_W1zRNdmMHRbMYU8yq3fdUtWiyRg",
-    authDomain: "echomoonart-5c25c.firebaseapp.com",
-    databaseURL: "https://echomoonart-5c25c-default-rtdb.firebaseio.com",
-    projectId: "echomoonart-5c25c",
-    storageBucket: "echomoonart-5c25c.firebasestorage.app",
-    messagingSenderId: "981942658843",
-    appId: "1:981942658843:web:7c3caafcea68b9255f55be",
-    measurementId: "G-GCW7P665S1"
+    apiKey: "AIzaSyB9-0re5Gx2yAe4e41fs7a2WUqHnOF3AkY",
+    authDomain: "echomoonart-ad626.firebaseapp.com",
+    projectId: "echomoonart-ad626",
+    storageBucket: "echomoonart-ad626.firebasestorage.app",
+    messagingSenderId: "769629404046",
+    appId: "1:769629404046:web:f09bb12d02edc83a2cc2df"
 };
 
 const app = initializeApp(firebaseConfig);

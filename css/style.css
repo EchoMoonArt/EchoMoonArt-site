@@ -1202,3 +1202,186 @@ a:focus-visible, button:focus-visible {
         text-align: center;
     }
 }
+
+/* =========================================================
+   Login page additions
+   ========================================================= */
+
+.login-section {
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 4rem 2rem 6rem;
+}
+
+.login-card {
+    background: var(--bg-card);
+    border: 1px solid rgba(155,89,182,0.25);
+    border-radius: var(--radius);
+    padding: 2.5rem 2rem;
+    text-align: center;
+}
+
+.login-title {
+    font-size: 2rem;
+    margin-bottom: 0.4rem;
+}
+
+.login-sub {
+    color: var(--ink-dim);
+    font-size: 0.92rem;
+    margin: 0 0 2rem;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    text-align: left;
+}
+
+.login-submit {
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+    .login-submit:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+    }
+
+/* =========================================================
+   Dashboard page additions
+   ========================================================= */
+
+.logout-glyph {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border: 1px solid rgba(155,89,182,0.35);
+    border-radius: 50%;
+    color: var(--ink-dim);
+    background: transparent;
+    cursor: pointer;
+    transition: color 0.25s ease, border-color 0.25s ease;
+}
+
+    .logout-glyph:hover {
+        color: var(--orange);
+        border-color: var(--orange);
+    }
+
+.dashboard-section {
+    max-width: 800px;
+}
+
+.dashboard-filter-bar {
+    display: flex;
+    justify-content: center;
+    gap: 0.7rem;
+    margin-bottom: 2rem;
+}
+
+.message-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.message-card {
+    background: var(--bg-card);
+    border: 1px solid rgba(155,89,182,0.2);
+    border-left: 3px solid rgba(155,89,182,0.2);
+    border-radius: var(--radius);
+    padding: 1.3rem 1.5rem;
+    transition: border-color 0.25s ease;
+}
+
+.message-card-unread {
+    border-left-color: var(--orange);
+    background: rgba(217,122,61,0.05);
+}
+
+.message-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 0.7rem;
+}
+
+.message-card-who {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.message-card-name {
+    font-family: var(--font-display);
+    font-size: 1.15rem;
+    color: var(--ink);
+}
+
+.message-card-email {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--orange);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.message-card-date {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    letter-spacing: 0.04em;
+    color: var(--ink-faint);
+    white-space: nowrap;
+}
+
+.message-card-body {
+    color: var(--ink-dim);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0 0 1rem;
+    white-space: pre-wrap;
+}
+
+.message-card-actions {
+    display: flex;
+    gap: 0.8rem;
+}
+
+.message-action {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--ink-dim);
+    background: transparent;
+    border: 1px solid rgba(155,89,182,0.3);
+    border-radius: 999px;
+    padding: 0.45rem 0.9rem;
+    cursor: pointer;
+    transition: color 0.25s ease, border-color 0.25s ease;
+}
+
+    .message-action:hover {
+        color: var(--ink);
+        border-color: var(--violet);
+    }
+
+.message-action-danger:hover {
+    color: #e3a7a7;
+    border-color: rgba(200,80,80,0.5);
+}
+
+/* ---------- responsive ---------- */
+@media (max-width: 560px) {
+    .message-card-header {
+        flex-direction: column;
+        gap: 0.3rem;
+    }
+}

@@ -11,7 +11,7 @@
 // Required environment variables (set in Vercel dashboard,
 // Settings > Environment Variables — never hardcode these):
 //   RESEND_API_KEY    — your Resend API key (starts with re_)
-//   RESEND_FROM_EMAIL  — verified sender, e.g. "Mani's Art <onboarding@resend.dev>"
+//   RESEND_FROM_EMAIL  — verified sender, e.g. "Echo Moon Art <onboarding@resend.dev>"
 //   CONTACT_TO_EMAIL   — the inbox that should receive new message alerts
 // =========================================================
 
@@ -69,7 +69,7 @@ module.exports = async function handler(req, res) {
                 reply_to: email,
                 subject: `New commission inquiry from ${name}`,
                 text:
-                    `You've got a new message from Mani's Art:\n\n` +
+                    `You've got a new message from Echo Moon Art:\n\n` +
                     `Name: ${name}\n` +
                     `Email: ${email}\n\n` +
                     `Message:\n${message}\n\n` +

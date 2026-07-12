@@ -1,5 +1,5 @@
 // =========================================================
-// Mani's Art — script.js
+// Echo Moon Art — script.js
 // Handles: mobile nav toggle, footer year, floating petal field
 // =========================================================
 

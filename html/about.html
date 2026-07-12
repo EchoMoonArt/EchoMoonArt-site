@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About — Mani's Art</title>
+    <meta name="description" content="Meet Mani — character illustrator behind Mani's Art.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Jost:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <div class="grain-overlay" aria-hidden="true"></div>
+    <div id="ember-field" class="ember-field" aria-hidden="true"></div>
+
+    <header class="site-header">
+        <a href="../index.html" class="wordmark">Mani<span class="wordmark-spark">'</span>s Art</a>
+
+        <nav class="main-nav" aria-label="Primary">
+            <a href="../index.html" class="nav-link">Home</a>
+            <a href="gallery.html" class="nav-link">Gallery</a>
+            <a href="about.html" class="nav-link is-active">About</a>
+            <a href="commission.html" class="nav-link">Commission</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+        </nav>
+
+        <a href="login.html" class="login-glyph" aria-label="Artist login" title="Artist login">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.4">
+                <circle cx="12" cy="12" r="9" />
+                <path d="M8 10c0-2 1.8-3 4-3s4 1 4 3-1.8 2.5-4 3.4C9.8 14.3 8 15 8 17" />
+                <circle cx="12" cy="20" r=".6" fill="currentColor" stroke="none" />
+            </svg>
+        </a>
+
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+    </header>
+
+    <main>
+
+        <!-- ABOUT HERO -->
+        <section class="about-hero">
+            <div class="about-hero-portrait" aria-hidden="true">
+                <svg viewBox="0 0 200 200" width="100%" height="100%">
+                    <defs>
+                        <radialGradient id="aboutGlow" cx="50%" cy="50%" r="50%">
+                            <stop offset="0%" stop-color="#9b59b6" stop-opacity="0.35" />
+                            <stop offset="100%" stop-color="#9b59b6" stop-opacity="0" />
+                        </radialGradient>
+                    </defs>
+                    <circle cx="100" cy="100" r="95" fill="url(#aboutGlow)" />
+                    <circle cx="100" cy="100" r="70" fill="#17101f" stroke="#6b3fa0" stroke-width="1" />
+                    <circle cx="100" cy="100" r="70" fill="none" stroke="#9b59b6" stroke-width="0.75" opacity="0.5" stroke-dasharray="2 5" />
+                </svg>
+            </div>
+
+            <p class="eyebrow eyebrow-center"><span class="moon-glyph">☽</span> the artist</p>
+            <h1 class="page-title">Hi, I'm Mani</h1>
+            <p class="page-sub">Character illustrator, chronic doodler, professional raging fruit basket.</p>
+        </section>
+
+        <svg class="vine-divider" viewBox="0 0 800 60" preserveAspectRatio="none" aria-hidden="true">
+            <path class="vine-path" d="M0,30 C150,0 250,60 400,30 C550,0 650,60 800,30" fill="none" stroke="url(#vineGrad)" stroke-width="1.5" />
+            <defs>
+                <linearGradient id="vineGrad" x1="0" y1="0" x2="1" y2="0">
+                    <stop offset="0%" stop-color="#9b59b6" stop-opacity="0" />
+                    <stop offset="50%" stop-color="#9b59b6" stop-opacity="0.8" />
+                    <stop offset="100%" stop-color="#9b59b6" stop-opacity="0" />
+                </linearGradient>
+            </defs>
+        </svg>
+
+        <!-- BIO -->
+        <section class="section bio-section">
+            <p class="bio-text">I paint characters the way I'd want to meet them — a little witchy, a little soft, always dramatic about it. Every piece starts as a doodle in a sketchbook margin and ends up somewhere much stranger.</p>
+            <p class="bio-text">I'm drawn to the in-between: the moment before a spell finishes casting, the last breath before a confession, the version of someone that only shows up in low light. If a piece feels like it's holding its breath, I've done my job.</p>
+        </section>
+
+        <!-- PROCESS -->
+        <section class="section section-alt">
+            <p class="eyebrow eyebrow-center"><span class="moon-glyph">◐</span> how a piece comes together</p>
+            <h2 class="section-title">My Process</h2>
+
+            <div class="process-steps">
+                <div class="process-step">
+                    <span class="process-number">01</span>
+                    <h3 class="process-title">Sketch</h3>
+                    <p class="process-desc">Loose gesture work to find the pose and the feeling before anything else.</p>
+                </div>
+                <div class="process-step">
+                    <span class="process-number">02</span>
+                    <h3 class="process-title">Ink</h3>
+                    <p class="process-desc">Cleaning the lines and deciding what actually needs to be there.</p>
+                </div>
+                <div class="process-step">
+                    <span class="process-number">03</span>
+                    <h3 class="process-title">Color</h3>
+                    <p class="process-desc">Building light and shadow in blocks before any detail work.</p>
+                </div>
+                <div class="process-step">
+                    <span class="process-number">04</span>
+                    <h3 class="process-title">Finish</h3>
+                    <p class="process-desc">Texture, glow, and the small details that make it feel alive.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- QUICK FACTS -->
+        <section class="section">
+            <p class="eyebrow eyebrow-center"><span class="moon-glyph">✦</span> quick facts</p>
+            <h2 class="section-title">A Few Favorites</h2>
+
+            <div class="facts-grid">
+                <span class="fact-chip">Digital painting</span>
+                <span class="fact-chip">Procreate &amp; Photoshop</span>
+                <span class="fact-chip">Character-first storytelling</span>
+                <span class="fact-chip">Moody color palettes</span>
+                <span class="fact-chip">Gothic &amp; whimsical themes</span>
+                <span class="fact-chip">Always taking notes on faces</span>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="section cta-banner">
+            <h2 class="section-title">Want a character of your own?</h2>
+            <p class="section-sub">Commissions are a great way to see your own characters come to life.</p>
+            <div class="hero-actions">
+                <a href="commission.html" class="btn btn-primary">Commission a Piece</a>
+                <a href="gallery.html" class="btn btn-ghost">Browse the Gallery</a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <svg class="vine-divider vine-divider-footer" viewBox="0 0 800 40" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M0,20 C200,0 600,40 800,20" fill="none" stroke="#6b3fa0" stroke-width="1" opacity="0.6" />
+        </svg>
+
+        <div class="footer-inner">
+            <span class="wordmark wordmark-small">Mani's Art</span>
+            <nav class="footer-nav" aria-label="Footer">
+                <a href="gallery.html">Gallery</a>
+                <a href="about.html">About</a>
+                <a href="commission.html">Commission</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <p class="footer-note">© <span id="year"></span> Mani's Art. Conjured with care.</p>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

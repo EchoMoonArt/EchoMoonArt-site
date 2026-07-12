@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mani's Art — Character Illustration & Commissions</title>
+    <meta name="description" content="Mani's Art — gothic, whimsical character illustration. Portfolio, behind-the-scenes, and commissions.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Jost:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="grain-overlay" aria-hidden="true"></div>
+    <div id="ember-field" class="ember-field" aria-hidden="true"></div>
+
+    <header class="site-header">
+        <a href="index.html" class="wordmark">Mani<span class="wordmark-spark">'</span>s Art</a>
+
+        <nav class="main-nav" aria-label="Primary">
+            <a href="index.html" class="nav-link is-active">Home</a>
+            <a href="html/gallery.html" class="nav-link">Gallery</a>
+            <a href="html/about.html" class="nav-link">About</a>
+            <a href="html/commission.html" class="nav-link">Commission</a>
+            <a href="html/contact.html" class="nav-link">Contact</a>
+        </nav>
+
+        <a href="html/login.html" class="login-glyph" aria-label="Artist login" title="Artist login">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.4">
+                <circle cx="12" cy="12" r="9" />
+                <path d="M8 10c0-2 1.8-3 4-3s4 1 4 3-1.8 2.5-4 3.4C9.8 14.3 8 15 8 17" />
+                <circle cx="12" cy="20" r=".6" fill="currentColor" stroke="none" />
+            </svg>
+        </a>
+
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+    </header>
+
+    <main>
+
+        <!-- HERO -->
+        <section class="hero">
+            <div class="hero-moon" aria-hidden="true">
+                <svg viewBox="0 0 200 200" width="100%" height="100%">
+                    <defs>
+                        <radialGradient id="moonGlow" cx="50%" cy="50%" r="50%">
+                            <stop offset="0%" stop-color="#d9a8f0" stop-opacity="0.55" />
+                            <stop offset="100%" stop-color="#d9a8f0" stop-opacity="0" />
+                        </radialGradient>
+                        <mask id="moonMask">
+                            <rect x="0" y="0" width="200" height="200" fill="black" />
+                            <circle cx="100" cy="100" r="46" fill="white" />
+                            <circle cx="118" cy="94" r="42" fill="black" />
+                        </mask>
+                    </defs>
+                    <circle cx="100" cy="100" r="95" fill="url(#moonGlow)" />
+                    <circle cx="100" cy="100" r="46" fill="#ece3d3" opacity="0.92" mask="url(#moonMask)" />
+                </svg>
+            </div>
+
+            <p class="eyebrow"><span class="moon-glyph">◐</span> character illustration &amp; commissions</p>
+            <h1 class="hero-title">Mani's&nbsp;Art</h1>
+            <p class="hero-sub">Portraits steeped in a little starlight, conjured one character at a time.</p>
+
+            <div class="hero-actions">
+                <a href="html/gallery.html" class="btn btn-primary">Enter the Gallery</a>
+                <a href="html/commission.html" class="btn btn-ghost">Commission a Piece</a>
+            </div>
+
+            <svg class="vine-divider" viewBox="0 0 800 60" preserveAspectRatio="none" aria-hidden="true">
+                <path class="vine-path" d="M0,30 C150,0 250,60 400,30 C550,0 650,60 800,30" fill="none" stroke="url(#vineGrad)" stroke-width="1.5" />
+                <defs>
+                    <linearGradient id="vineGrad" x1="0" y1="0" x2="1" y2="0">
+                        <stop offset="0%" stop-color="#9b59b6" stop-opacity="0" />
+                        <stop offset="50%" stop-color="#9b59b6" stop-opacity="0.8" />
+                        <stop offset="100%" stop-color="#9b59b6" stop-opacity="0" />
+                    </linearGradient>
+                </defs>
+                <g class="vine-leaves" fill="#9b59b6" opacity="0.85">
+                    <ellipse cx="150" cy="14" rx="6" ry="3" transform="rotate(-20 150 14)" />
+                    <ellipse cx="400" cy="46" rx="6" ry="3" transform="rotate(15 400 46)" />
+                    <ellipse cx="650" cy="14" rx="6" ry="3" transform="rotate(-20 650 14)" />
+                </g>
+            </svg>
+        </section>
+
+        <!-- FEATURED WORK -->
+        <section class="section" id="featured">
+            <p class="eyebrow eyebrow-center"><span class="moon-glyph">☾</span> from the gallery</p>
+            <h2 class="section-title">Recently Conjured</h2>
+
+            <div class="work-grid">
+                <figure class="work-card">
+                    <div class="work-frame">
+                        <img src="images/portfolio/placeholder-1.jpg" alt="Character portrait, placeholder artwork" loading="lazy">
+                    </div>
+                    <figcaption>
+                        <span class="work-name">Character name</span>
+                        <span class="work-tag">Digital portrait</span>
+                    </figcaption>
+                </figure>
+
+                <figure class="work-card">
+                    <div class="work-frame">
+                        <img src="images/portfolio/placeholder-2.jpg" alt="Character portrait, placeholder artwork" loading="lazy">
+                    </div>
+                    <figcaption>
+                        <span class="work-name">Character name</span>
+                        <span class="work-tag">Digital portrait</span>
+                    </figcaption>
+                </figure>
+
+                <figure class="work-card">
+                    <div class="work-frame">
+                        <img src="images/portfolio/placeholder-3.jpg" alt="Character portrait, placeholder artwork" loading="lazy">
+                    </div>
+                    <figcaption>
+                        <span class="work-name">Character name</span>
+                        <span class="work-tag">Digital portrait</span>
+                    </figcaption>
+                </figure>
+
+                <figure class="work-card">
+                    <div class="work-frame">
+                        <img src="images/portfolio/placeholder-4.jpg" alt="Character portrait, placeholder artwork" loading="lazy">
+                    </div>
+                    <figcaption>
+                        <span class="work-name">Character name</span>
+                        <span class="work-tag">Digital portrait</span>
+                    </figcaption>
+                </figure>
+            </div>
+
+            <a href="html/gallery.html" class="see-all-link">See the full gallery →</a>
+        </section>
+
+        <svg class="vine-divider" viewBox="0 0 800 60" preserveAspectRatio="none" aria-hidden="true">
+            <path class="vine-path" d="M0,30 C150,60 250,0 400,30 C550,60 650,0 800,30" fill="none" stroke="url(#vineGrad)" stroke-width="1.5" />
+        </svg>
+
+        <!-- BEHIND THE SCENES -->
+        <section class="section section-alt" id="wip">
+            <p class="eyebrow eyebrow-center"><span class="moon-glyph">◑</span> in progress</p>
+            <h2 class="section-title">Behind the Bloom</h2>
+            <p class="section-sub">Sketches, palettes, and half-finished spells — the mess before the magic.</p>
+
+            <div class="wip-categories">
+                <a href="gallery.html#sketches" class="wip-card">
+                    <span class="wip-icon">✎</span>
+                    <span class="wip-label">Sketches</span>
+                </a>
+                <a href="gallery.html#palettes" class="wip-card">
+                    <span class="wip-icon">◈</span>
+                    <span class="wip-label">Color Studies</span>
+                </a>
+                <a href="gallery.html#timelapse" class="wip-card">
+                    <span class="wip-icon">⧗</span>
+                    <span class="wip-label">Progress Shots</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- ABOUT TEASER -->
+        <section class="section about-teaser">
+            <div class="about-teaser-inner">
+                <div class="about-portrait" aria-hidden="true">
+                  
+                 <img class="artist-photo" src="images/self-portrait.jpg" alt="Echo Moon Art Self Portrait">
+                    
+                </div>
+                <div class="about-teaser-text">
+                    <p class="eyebrow"><span class="moon-glyph">☽</span> the artist</p>
+                    <h2 class="section-title">Hi, I'm Mani</h2>
+                    <p>I paint characters the way I'd want to meet them — a little witchy, a little soft, always dramatic about it. Every piece starts as a doodle in a sketchbook margin and ends up somewhere much stranger.</p>
+                    <a href="html/about.html" class="see-all-link">Read the full story →</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <svg class="vine-divider vine-divider-footer" viewBox="0 0 800 40" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M0,20 C200,0 600,40 800,20" fill="none" stroke="#6b3fa0" stroke-width="1" opacity="0.6" />
+        </svg>
+
+        <div class="footer-inner">
+            <span class="wordmark wordmark-small">Mani's Art</span>
+            <nav class="footer-nav" aria-label="Footer">
+                <a href="html/gallery.html">Gallery</a>
+                <a href="html/about.html">About</a>
+                <a href="html/commission.html">Commission</a>
+                <a href="html/contact.html">Contact</a>
+            </nav>
+            <p class="footer-note">© <span id="year"></span> Mani's Art. Conjured with care.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

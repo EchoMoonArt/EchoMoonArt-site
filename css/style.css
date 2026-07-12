@@ -494,6 +494,15 @@ h1, h2, h3 {
     flex-shrink: 0;
 }
 
+.artist-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 1px solid rgba(155,89,182,0.4);
+    box-shadow: 0 0 24px rgba(155,89,182,0.2);
+}
+
 .about-teaser-text p:not(.eyebrow) {
     color: var(--ink-dim);
     max-width: 52ch;
@@ -1383,5 +1392,116 @@ a:focus-visible, button:focus-visible {
     .message-card-header {
         flex-direction: column;
         gap: 0.3rem;
+    }
+}
+
+/* =========================================================
+   Lightbox — click any portfolio image to view it larger.
+   Injected into the DOM by script.js; works on any page
+   with .work-frame images (index.html, gallery.html, etc.)
+   with no HTML changes needed.
+   ========================================================= */
+
+.work-frame {
+    cursor: pointer;
+    position: relative;
+}
+
+    /* subtle "click to enlarge" hint on hover, so it's discoverable */
+    .work-frame::before {
+        content: "⤢";
+        position: absolute;
+        top: 0.6rem;
+        right: 0.6rem;
+        width: 28px;
+        height: 28px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(11, 8, 18, 0.65);
+        border: 1px solid rgba(155,89,182,0.4);
+        border-radius: 50%;
+        color: var(--ink);
+        font-size: 0.9rem;
+        opacity: 0;
+        transform: scale(0.85);
+        transition: opacity 0.2s ease, transform 0.2s ease;
+        pointer-events: none;
+        z-index: 2;
+    }
+
+.work-card:hover .work-frame::before {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(6, 4, 10, 0.88);
+    backdrop-filter: blur(3px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+    padding: 2rem;
+}
+
+    .lightbox.is-open {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+.lightbox-inner {
+    position: relative;
+    max-width: min(90vw, 1100px);
+    max-height: 90vh;
+    display: flex;
+}
+
+.lightbox-image {
+    max-width: 100%;
+    max-height: 90vh;
+    display: block;
+    border-radius: var(--radius);
+    box-shadow: 0 0 60px rgba(155,89,182,0.25);
+    transform: scale(0.96);
+    transition: transform 0.25s ease;
+}
+
+.lightbox.is-open .lightbox-image {
+    transform: scale(1);
+}
+
+.lightbox-close {
+    position: absolute;
+    top: -14px;
+    right: -14px;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-card);
+    border: 1px solid rgba(155,89,182,0.4);
+    border-radius: 50%;
+    color: var(--ink);
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+    .lightbox-close:hover {
+        color: var(--orange);
+        border-color: var(--orange);
+    }
+
+@media (max-width: 560px) {
+    .lightbox-close {
+        top: 0.5rem;
+        right: 0.5rem;
     }
 }

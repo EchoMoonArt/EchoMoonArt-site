@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setFooterYear();
     initEmberField();
     initGalleryFilter();
+    initLightbox();
 });
 
 /* ---------- mobile nav ---------- */
@@ -108,5 +109,66 @@ function initGalleryFilter() {
         });
 
         if (emptyState) emptyState.hidden = visibleCount !== 0;
+    });
+}
+/* ---------- lightbox ----------
+   Click any portfolio image (anything inside .work-frame) to
+   view it larger in a modal overlay. Builds the modal markup
+   once on first use, so no HTML changes are needed on any
+   page — works on index.html, gallery.html, or any future
+   page that uses the same .work-frame pattern.
+*/
+function initLightbox() {
+    const images = document.querySelectorAll('.work-frame img');
+    if (images.length === 0) return;
+
+    const lightbox = document.createElement('div');
+    lightbox.className = 'lightbox';
+    lightbox.setAttribute('role', 'dialog');
+    lightbox.setAttribute('aria-modal', 'true');
+    lightbox.setAttribute('aria-label', 'Enlarged artwork');
+    lightbox.innerHTML = `
+        <div class="lightbox-inner">
+            <button class="lightbox-close" aria-label="Close">&times;</button>
+            <img class="lightbox-image" src="" alt="">
+        </div>
+    `;
+    document.body.appendChild(lightbox);
+
+    const lightboxImg = lightbox.querySelector('.lightbox-image');
+    const closeBtn = lightbox.querySelector('.lightbox-close');
+
+    function openLightbox(src, alt) {
+        lightboxImg.src = src;
+        lightboxImg.alt = alt || '';
+        lightbox.classList.add('is-open');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+        lightbox.classList.remove('is-open');
+        document.body.style.overflow = '';
+        // clear the src after the fade-out finishes, so a large image
+        // isn't held in memory/decoded while the modal is closed
+        setTimeout(() => {
+            if (!lightbox.classList.contains('is-open')) lightboxImg.src = '';
+        }, 250);
+    }
+
+    images.forEach((img) => {
+        img.addEventListener('click', () => openLightbox(img.src, img.alt));
+    });
+
+    closeBtn.addEventListener('click', closeLightbox);
+
+    // clicking the dimmed backdrop (but not the image itself) closes it
+    lightbox.addEventListener('click', (event) => {
+        if (event.target === lightbox) closeLightbox();
+    });
+
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && lightbox.classList.contains('is-open')) {
+            closeLightbox();
+        }
     });
 }

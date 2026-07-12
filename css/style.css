@@ -16,8 +16,8 @@
     --ink-dim: #b3a1c4;
     --ink-faint: #7c6d8c;
     --font-display: 'Cinzel', 'Georgia', serif;
-    --font-body: 'Jost', 'Segoe UI', sans-serif;
-    --font-mono: 'Space Mono', monospace;
+    --font-body: 'Cinzel', 'Georgia', serif;
+    --font-mono: 'Cinzel', monospace;
     --radius: 4px;
     --max-width: 1180px;
     --shadow-glow: 0 0 40px rgba(155, 89, 182, 0.18);
@@ -48,7 +48,7 @@ body {
     background: var(--bg);
     color: var(--ink);
     font-family: var(--font-body);
-    font-weight: 300;
+    font-weight: 400;
     line-height: 1.6;
     position: relative;
     overflow-x: hidden;
